@@ -61,7 +61,7 @@ export default class SoakedFunctionApplicationPatcher extends FunctionApplicatio
   }
 
   shouldPatchAsOptionalChaining(): boolean {
-    return this.options.useOptionalChaining === true && !this.fn.mayBeUnboundReference();
+    return this.options.useOptionalChaining === true; // && !this.fn.mayBeUnboundReference();
   }
 
   shouldPatchAsConditional(): boolean {
