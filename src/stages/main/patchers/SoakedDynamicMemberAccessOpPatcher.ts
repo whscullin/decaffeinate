@@ -34,7 +34,7 @@ export default class SoakedDynamicMemberAccessOpPatcher extends DynamicMemberAcc
   }
 
   shouldPatchAsOptionalChaining(): boolean {
-    return this.options.useOptionalChaining === true && !this.expression.mayBeUnboundReference();
+    return this.options.useOptionalChaining === true; // && !this.expression.mayBeUnboundReference();
   }
 
   shouldPatchAsConditional(): boolean {

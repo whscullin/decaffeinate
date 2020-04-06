@@ -26,7 +26,7 @@ export default class SoakedMemberAccessOpPatcher extends MemberAccessOpPatcher {
   }
 
   shouldPatchAsOptionalChaining(): boolean {
-    return this.options.useOptionalChaining === true && !this.expression.mayBeUnboundReference();
+    return this.options.useOptionalChaining === true; // && !this.expression.mayBeUnboundReference();
   }
 
   shouldPatchAsConditional(): boolean {
